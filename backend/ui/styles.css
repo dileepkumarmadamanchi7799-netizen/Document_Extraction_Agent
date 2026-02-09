@@ -1,0 +1,180 @@
+/* ========== Colorful Document Intelligence UI ========== */
+
+/* Hide Streamlit header Deploy button and main menu */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+/* Deploy link in toolbar (Streamlit 1.38+) */
+a[href*="cloud.streamlit.io"],
+a[href*="share.streamlit.io"],
+button[kind="header"] + a,
+[data-testid="stToolbar"] a[href*="streamlit.io"] { display: none !important; }
+
+/* Global background – soft gradient */
+body, [data-testid="stAppViewContainer"] {
+  background: linear-gradient(135deg, #fef7f4 0%, #f0f4ff 35%, #f4f0ff 70%, #f0fff4 100%);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2d3748;
+}
+
+/* Headings – vibrant palette */
+h1, h2, h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+}
+h1 { color: #1a365d; }
+h2 { color: #2c5282; }
+h3 { color: #553c9a; }
+
+/* Primary buttons – teal/coral */
+.stButton button {
+  background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4);
+}
+
+.stButton button:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Images (previews) */
+.stImage img {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  margin-bottom: 12px;
+  border: 2px solid rgba(13, 148, 136, 0.2);
+}
+
+/* JSON display panels – purple accent */
+.stJson {
+  background: linear-gradient(145deg, #ffffff 0%, #faf5ff 100%);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  border-left: 5px solid #7c3aed;
+}
+
+/* Sidebar – gradient and colorful text */
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, #ffffff 0%, #fefce8 50%, #f0fdfa 100%);
+  border-right: 2px solid #e2e8f0;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-testid="stSidebar"] h3 {
+  color: #0f766e;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+[data-testid="stSidebar"] p {
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+[data-testid="stSidebar"] code {
+  background: linear-gradient(135deg, #ccfbf1 0%, #e0e7ff 100%);
+  color: #0f766e;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 3px 8px;
+}
+
+/* Progress bar – gradient */
+[data-testid="stProgressBar"] > div > div {
+  background: linear-gradient(90deg, #0d9488 0%, #7c3aed 100%) !important;
+  border-radius: 4px;
+}
+
+/* Download buttons – coral/amber */
+.stDownloadButton button {
+  background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 12px rgba(234, 88, 12, 0.35);
+}
+
+.stDownloadButton button:hover {
+  background: linear-gradient(135deg, #0891b2 0%, #0d9488 100%);
+  box-shadow: 0 5px 18px rgba(8, 145, 178, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Tables – no color, clear headings (Processing Summary, etc.) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff !important;
+  color: #1e293b;
+}
+
+th {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+tr:nth-child(even) td {
+  background-color: #fafafa !important;
+}
+
+/* ========== Header (title only, no logo) ========== */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.12) 0%, rgba(124, 58, 237, 0.1) 50%, rgba(234, 88, 12, 0.08) 100%);
+  border-radius: 16px;
+  border-left: 6px solid #0d9488;
+  box-shadow: 0 4px 20px rgba(13, 148, 136, 0.15);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-text h1 {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f766e 0%, #7c3aed 50%, #c2410c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.header-text p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.15rem;
+  color: #475569;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 600px;
+  line-height: 1.45;
+}

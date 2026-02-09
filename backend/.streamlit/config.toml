@@ -1,0 +1,4 @@
+# Hide developer options (including Deploy button) in the header toolbar
+# "minimal" = show only external options; "viewer" = hide developer options
+[client]
+toolbarMode = "minimal"

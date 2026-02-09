@@ -1,0 +1,70 @@
+{
+  "agentName": "Document_Intelligence",
+  "secretName": "document_intelligence",
+  "owner_mail": "dileep.madamanchi@quadranttechnologies.com",
+  "ownerName": "Dileep Madamanchi",
+  "departName": "Engineering",
+  "managerName": "",
+  "agent_summary": "Document Intelligence is an AI-powered agent that extracts structured data from PDFs and images using Azure Document Intelligence (OCR) and Azure OpenAI. It automatically detects document types (Proof of Residence, Proof of Income, Driver's License, etc.), returns confidence scores from the OCR engine, and exports normalized JSON for each document with optional summary and logs.",
+  "agentUsageInstruction": "Upload one or more documents (PDF, PNG, JPG, JPEG) in the web UI. Click 'Process Documents' to run OCR and extraction. The system detects document type, extracts structured fields, and shows a progress bar. Review results in the summary table, view or download JSON per document, and optionally download the summary JSON and processing logs. Use the Dark mode toggle in the sidebar for theme preference.",
+  "capabilities": [
+    "AI-Powered Document Data Extraction from PDF and Images",
+    "Multi-File Upload Support (PDF, PNG, JPG, JPEG)",
+    "Azure Document Intelligence (Layout OCR) with Word-Level Confidence",
+    "Automatic Document-Type Detection (Proof of Residence, Proof of Income, Driver's License, etc.)",
+    "Azure OpenAI (GPT) for Structured JSON Extraction",
+    "Confidence Score from Document Intelligence in Output",
+    "Driver's License Field Refinement (Optional GPT Pass)",
+    "Processing Progress (Percentage, Current File, Document X of Y)",
+    "View JSON and Download JSON per Document",
+    "Download Summary JSON and Processing Logs",
+    "Dark Mode with Readable Sidebar and Main Content",
+    "Processing Summary Table (Document, Status, Detected Type, JSON File)"
+  ],
+  "workflow": [
+    { "step": 1, "action": "Open the Streamlit app at http://localhost:8501" },
+    { "step": 2, "action": "Upload one or more documents (PDF, PNG, JPG, JPEG) via drag-and-drop or Browse files" },
+    { "step": 3, "action": "Click 'Process Documents' to start OCR and extraction" },
+    { "step": 4, "action": "Monitor progress (percentage, current file name, document count)" },
+    { "step": 5, "action": "Review the Processing Summary table (document, status, detected type, JSON file)" },
+    { "step": 6, "action": "Per document: download JSON or expand 'View JSON' to see extracted data" },
+    { "step": 7, "action": "Download Summary JSON and Processing Logs if needed" },
+    { "step": 8, "action": "Use Dark mode toggle in the sidebar to switch theme" }
+  ],
+  "technology": [
+    "Python 3.10+",
+    "Streamlit",
+    "Azure Document Intelligence (Form Recognizer)",
+    "Azure OpenAI (GPT-4)",
+    "python-dotenv",
+    "Azure Core / Azure Identity"
+  ],
+  "Solution_areas": [
+    "Document Processing",
+    "OCR and Text Extraction",
+    "Structured Data Extraction",
+    "Proof of Residence / Income",
+    "Identity Documents (Driver's License)",
+    "Form Automation",
+    "Compliance and Verification"
+  ],
+  "problem_statement": "Manually reading documents (proof of residence, income, IDs, etc.) and typing data into systems is slow and error-prone. Teams need a reliable way to extract structured information from PDFs and images with traceable confidence and consistent JSON output.",
+  "solution": "AI-powered document intelligence agent that uses Azure Document Intelligence for OCR and confidence scoring, and Azure OpenAI for type-agnostic structured extraction. Supports multiple document types, multi-file upload, progress visibility, and JSON export with optional driver's license refinement.",
+  "documents": [
+    {
+      "title": "README - Project Overview and Quick Start",
+      "sharepoint_url": ""
+    }
+  ],
+  "benefits": [
+    "Structured JSON output for every document with minimal manual entry",
+    "Confidence score from Document Intelligence for reliability assessment",
+    "Automatic document-type detection reduces configuration per type",
+    "Multi-file upload for batch processing",
+    "Progress indicator (percentage and current file) for better UX",
+    "Dark mode and accessible sidebar for different preferences",
+    "Download per-document JSON, summary JSON, and logs for traceability"
+  ],
+  "github_url": "",
+  "videos": []
+}
